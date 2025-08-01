@@ -15,6 +15,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+      <head>
+        {/* ✅ FullCalendar CDN CSS for compatibility with StackBlitz */}
+        <link
+          href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.9/main.min.css"
+          rel="stylesheet"
+        />
+        <link
+          href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.9/main.min.css"
+          rel="stylesheet"
+        />
+      </head>
       <body className="min-h-screen bg-blue-50 dark:bg-gray-900 text-gray-800 dark:text-white transition-colors duration-300">
         {children}
         <Toaster position="top-center" />
